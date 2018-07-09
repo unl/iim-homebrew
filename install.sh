@@ -34,10 +34,8 @@ brew install links
 brew install media-info
 brew install mysql
 brew install node
-brew install --with-homebrew-curl php70
-brew install php70-intl php70-mcrypt php70-opcache php70-tidy php70-xdebug
-brew install --HEAD php70-memcached
-brew install --HEAD php70-imagick
+brew install memcached
+brew install php
 brew install phpmd
 brew install composer
 brew install php-code-sniffer
