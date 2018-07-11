@@ -47,15 +47,15 @@ if [ ! -d /usr/local/etc/httpd ]; then
 	exit 1
 fi
 
-if [ ! -d /usr/local/etc/php/7.0 ]; then
-	echo "Failed to properly install php 7"
+if [ ! -d /usr/local/etc/php/7.2 ]; then
+	echo "Failed to properly install php 7.2"
 	exit 1
 fi
 
 # Copy patched configuration
 echo "Copying common Apache and PHP configuration. It is okay to skip these if you do not want to override your local copy."
 cp -ai etc/httpd/* /usr/local/etc/httpd
-cp -ai etc/php70/* /usr/local/etc/php/7.0
+cp -ai etc/php70/* /usr/local/etc/php/7.2
 
 # Start system daemons
 echo "Stopping Apple's Apache..."
@@ -63,7 +63,7 @@ sudo /usr/sbin/apachectl stop
 echo "Starting Homebrew Memcached on default port..."
 sudo brew services restart memcached
 echo "Starting Homebrew PHP-FPM on a unix socket..."
-sudo brew services restart php70
+sudo brew services restart php
 echo "starting Homebrew Apache on default ports..."
 sudo brew services restart httpd
 
