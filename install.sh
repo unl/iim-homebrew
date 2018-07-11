@@ -32,7 +32,7 @@ brew install imagemagick --with-librsvg --with-webp --with-libwmf --with-liblqr 
 brew install jpegoptim
 brew install links
 brew install media-info
-brew install mysql
+brew install mysql@5.7
 brew install node
 brew install memcached
 brew install php
