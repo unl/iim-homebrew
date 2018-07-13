@@ -17,14 +17,14 @@ for php in php53 php54 php55 php56; do
 done
 
 # Install common taps
-brew tap homebrew/dupes
-brew tap homebrew/php
 brew tap homebrew/services
-brew tap homebrew/versions
+brew tap kabel/php-ext
 
 # Install common formulae
 brew install Caskroom/cask/xquartz
+brew install openldap
 brew install --with-openssl curl
+brew install apr-util --with-openldap
 brew install gd
 brew install git
 brew install httpd
@@ -34,13 +34,16 @@ brew install links
 brew install media-info
 brew install mysql@5.7
 brew install node
+brew install libmemcached
 brew install memcached
 brew install php
-brew install phpmd
 brew install composer
 brew install php-code-sniffer
 brew install pngquant
 brew install wget
+brew install shibboleth-sp
+brew install certbot
+
 
 if [ ! -d /usr/local/etc/httpd ]; then
 	echo "Failed to properly install apache"
